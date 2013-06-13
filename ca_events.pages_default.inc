@@ -814,7 +814,7 @@ function ca_events_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Events';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
