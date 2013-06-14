@@ -52,11 +52,11 @@ function ca_events_menu_alter(&$items) {
  */
 function ca_events_panels_pre_render($panel, $renderer) {
   foreach ($panel->content as $key => $value) {
-    if ($value->subtype == 'ca_event-ca_event_list_1') {
+    if ($value->subtype == 'ca_events_list-ca_event_calendar_view_1') {
       $panel->title = variable_get('ca_events_panel_title', 'Events');
-    } elseif ($value->subtype == 'ca_event-ca_event_list_2') {
+    } elseif ($value->subtype == 'ca_events_list-ca_event_list_view_1') {
       $panel->title = variable_get('ca_events_panel_title', 'Events');
-    } elseif ($value->subtype == 'ca_event-ca_event_list_3') {
+    } elseif ($value->subtype == 'ca_events_list-ca_event_list_view_2') {
       $panel->title = variable_get('ca_events_panel_title', 'Events');
     }
   }
