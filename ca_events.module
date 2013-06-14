@@ -54,6 +54,10 @@ function ca_events_panels_pre_render($panel, $renderer) {
   foreach ($panel->content as $key => $value) {
     if ($value->subtype == 'ca_event-ca_event_list_1') {
       $panel->title = variable_get('ca_events_panel_title', 'Events');
+    } elseif ($value->subtype == 'ca_event-ca_event_list_2') {
+      $panel->title = variable_get('ca_events_panel_title', 'Events');
+    } elseif ($value->subtype == 'ca_event-ca_event_list_3') {
+      $panel->title = variable_get('ca_events_panel_title', 'Events');
     }
   }
 }
