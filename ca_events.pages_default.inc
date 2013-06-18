@@ -49,7 +49,7 @@ function ca_events_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-event-node-template-1',
+    'body_classes_to_add' => 'ca-event-node ca-event-node-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -257,7 +257,7 @@ function ca_events_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-event-node-template-2',
+    'body_classes_to_add' => 'ca-event-node ca-event-node-template-2',
   );
   $display = new panels_display();
   $display->layout = 'twocol';
@@ -427,7 +427,7 @@ function ca_events_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-events-calendar-term ca-events-calendar-term-template-1',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -508,7 +508,7 @@ function ca_events_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-event-term-template-2',
+    'body_classes_to_add' => 'ca-events-list-term ca-events-list-term-template-2',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -706,6 +706,8 @@ function ca_events_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-events-admin',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -868,7 +870,7 @@ function ca_events_default_page_manager_pages() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-event-list-template-1',
+    'body_classes_to_add' => 'ca-event-list ca-event-list-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -934,7 +936,7 @@ function ca_events_default_page_manager_pages() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-event-list-template-2',
+    'body_classes_to_add' => 'ca-event-list ca-event-list-template-2',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
