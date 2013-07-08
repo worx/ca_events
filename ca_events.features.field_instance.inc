@@ -86,7 +86,7 @@ function ca_events_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ca_events_date',
     'label' => 'Date',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',

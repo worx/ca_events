@@ -319,7 +319,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -358,10 +358,10 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
   $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
 
-  /* Display: CA Events: Upcoming Block */
-  $handler = $view->new_display('block', 'CA Events: Upcoming Block', 'ca_event_block_view_1');
+  /* Display: CA Events: Events Block Template One */
+  $handler = $view->new_display('block', 'CA Events: Events Block Template One', 'ca_event_block_view_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['block_description'] = 'CA Events: Upcoming Block';
+  $handler->display->display_options['block_description'] = 'CA Events: Events Block Template One';
   $export['ca_events_block'] = $view;
 
   $view = new view();
@@ -680,7 +680,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
