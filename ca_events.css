@@ -1,14 +1,17 @@
 .node-type-ca-event .pane-ca-events-node-ca-event-node-view-1 {float: left;}
 .node-type-ca-event .pane-node-field-ca-events-date {display: inline-block;}
 
+.ca-event-node ca-event-node-template-1 .pane-ca-events-node-ca-event-node-view-1a {float: left;}
+
+.ca-event-node ca-event-node-template-1 .pane-ca-events-node-ca-event-node-view-1b {clear: left; float: left; padding: 0 15px 5px 0; width: 200px;}
+
+.ca-event-node ca-event-node-template-1 .pane-ca-events-node-ca-event-node-view-1a .views-field-field-ca-case-study-c-screenshot {padding: 0 15px 5px 0;}
+
 .node-type-ca-event .views-field-field-ca-events-image, .pane-ca-events-list-ca-event-list-view-1 .views-field-field-ca-events-image, .pane-ca-events-term-ca-event-term-view-1 .views-field-field-ca-events-image, .pane-ca-events-list-ca-event-list-view-2 .views-field-field-ca-events-image {float: left; padding-right: 10px; padding-bottom: 5px;}
+
 
 .pane-ca-events-list-ca-event-list-view-1 .views-field-addtoany-link, .pane-ca-events-list-ca-event-list-view-1 .views-field-nothing,
 .pane-ca-events-list-ca-event-list-view-2 .views-field-addtoany-link, .pane-ca-events-list-ca-event-list-view-2 .views-field-nothing {clear: both;}
-
-.views-field-field-ca-events-image-1 {float: left; clear: left; width: 200px; padding-right: 10px;}
-
-.views-field-field-ca-events-image-1 img {padding-right: 5px; padding-bottom: 5px;}
 
 .pane-node-field-ca-events-date {font-weight: bold;}
 
