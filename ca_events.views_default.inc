@@ -284,7 +284,6 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['field_ca_events_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_ca_events_image']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_ca_events_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_ca_events_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_events_image']['settings'] = array(
     'image_style' => 'thumbnail',
@@ -802,7 +801,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'fullcalendar';
   /* Field: Content: Title */
@@ -846,8 +846,8 @@ function ca_events_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
 
-  /* Display: CA Events: Node View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Events: Node View Template One', 'ca_event_node_view_1');
+  /* Display: CA Events: Node View Template One A */
+  $handler = $view->new_display('panel_pane', 'CA Events: Node View Template One A', 'ca_event_node_view_1_a');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -872,9 +872,40 @@ function ca_events_views_default_views() {
     'colorbox_gallery' => 'page',
     'colorbox_gallery_custom' => '',
     'colorbox_caption' => 'auto',
+    'colorbox_caption_custom' => '',
   );
+  $handler->display->display_options['fields']['field_ca_events_image']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_ca_events_image']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_title'] = 'CA Events: Node View Template One A';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Events: Node View Template One B */
+  $handler = $view->new_display('panel_pane', 'CA Events: Node View Template One B', 'ca_event_node_view_1_b');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_ca_events_image_1']['id'] = 'field_ca_events_image_1';
   $handler->display->display_options['fields']['field_ca_events_image_1']['table'] = 'field_data_field_ca_events_image';
@@ -882,6 +913,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['field_ca_events_image_1']['label'] = '';
   $handler->display->display_options['fields']['field_ca_events_image_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_image_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_events_image_1']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_events_image_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_events_image_1']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_ca_events_image_1']['settings'] = array(
@@ -892,6 +924,7 @@ function ca_events_views_default_views() {
     'colorbox_caption' => 'auto',
     'colorbox_caption_custom' => '',
   );
+  $handler->display->display_options['fields']['field_ca_events_image_1']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_image_1']['delta_offset'] = '1';
   $handler->display->display_options['fields']['field_ca_events_image_1']['separator'] = '';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -904,13 +937,16 @@ function ca_events_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['pane_title'] = 'CA Events: Node View Template One';
+  $handler->display->display_options['pane_title'] = 'CA Events: Node View Template One B';
   $handler->display->display_options['pane_category']['name'] = 'CA Node';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: CA Events: Node View Calendar Date Field */
   $handler = $view->new_display('panel_pane', 'CA Events: Node View Calendar Date Field', 'ca_event_node_view_calendar_date');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'fullcalendar';
   $handler->display->display_options['style_options']['weekMode'] = 'liquid';
