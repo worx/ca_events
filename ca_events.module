@@ -66,10 +66,12 @@ function ca_events_panels_pre_render($panel, $renderer) {
  * Implements hook_views_pre_render().
  */
 function ca_events_views_pre_view(&$view, &$display_id, &$args) {
-  if ($display_id == 'ca_event_list_1') {
+  if ($display_id == 'ca_event_list_view_1') {
+    $view->set_items_per_page(variable_get('ca_events_list_count', 5));
+  } elseif ($display_id == 'ca_event_list_view_2') {
     $view->set_items_per_page(variable_get('ca_events_list_count', 5));
   }
-  elseif ($display_id == 'ca_event_block_view_1') {
+  if ($display_id == 'ca_event_block_view_1') {
     $view->set_items_per_page(variable_get('ca_events_block_count', 1));
   }
 }
