@@ -455,8 +455,8 @@ function ca_events_default_page_manager_handlers() {
         0 => array(
           'name' => 'term_vocabulary',
           'settings' => array(
-            'vids' => array(
-              1 => '1',
+            'machine_name' => array(
+              'ca_events_categories' => 'ca_events_categories',
             ),
           ),
           'context' => 'argument_term_1',
@@ -536,8 +536,8 @@ function ca_events_default_page_manager_handlers() {
         0 => array(
           'name' => 'term_vocabulary',
           'settings' => array(
-            'vids' => array(
-              1 => '1',
+            'machine_name' => array(
+              'ca_events_categories' => 'ca_events_categories',
             ),
           ),
           'context' => 'argument_term_1',

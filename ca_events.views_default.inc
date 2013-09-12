@@ -743,7 +743,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
   $handler->display->display_options['filters']['field_ca_events_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = '12AM today';
   /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
@@ -880,7 +880,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
   $handler->display->display_options['filters']['field_ca_events_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = '12AM today';
   /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
@@ -1242,7 +1242,7 @@ function ca_events_views_default_views() {
   );
   $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
   $handler->display->display_options['pane_title'] = 'CA Events: Term View Calendar Date Field';
-  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['name'] = 'CA Term';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'tid' => array(
@@ -1259,6 +1259,12 @@ function ca_events_views_default_views() {
   /* Display: CA Events: Term View Template One */
   $handler = $view->new_display('panel_pane', 'CA Events: Term View Template One', 'ca_event_term_view_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1323,7 +1329,81 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Events: Term View Template One';
-  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['name'] = 'CA Term';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: CA Events: Term View Template Two */
+  $handler = $view->new_display('panel_pane', 'CA Events: Term View Template Two', 'ca_event_term_view_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_ca_events_date']['id'] = 'field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['field'] = 'field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_events_date']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['field_ca_events_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_events_date']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title] [field_ca_events_date]';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_ca_events_image']['id'] = 'field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['table'] = 'field_data_field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['field'] = 'field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_events_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_events_image']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_events_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_events_image']['settings'] = array(
+    'image_style' => 'default',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_events_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_events_image']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Events: Term View Template Two';
+  $handler->display->display_options['pane_category']['name'] = 'CA Term';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
@@ -1335,7 +1415,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['path'] = 'categories/%/feed';
+  $handler->display->display_options['path'] = 'events/categories/%/feed';
   $handler->display->display_options['displays'] = array(
     'ca_event_term_view_calendar_date' => 'ca_event_term_view_calendar_date',
     'ca_event_term_view_1' => 'ca_event_term_view_1',

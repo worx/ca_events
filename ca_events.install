@@ -21,4 +21,7 @@ function ca_events_install() {
 	
   // Set the Pathauto for the node.
   variable_set('pathauto_node_ca_event_pattern', 'events/[node:title]');
+	
+  // Set the Pathauto for the term.
+  variable_set('pathauto_taxonomy_term_ca_events_categories_pattern', 'events/[term:vocabulary]/[term:name]');
 }

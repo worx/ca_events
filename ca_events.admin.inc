@@ -73,7 +73,6 @@ function ca_events_settings_form() {
     '#options' => array(
       'ca_events_node_template_one' => t('Template one'),
       'ca_events_node_template_two' => t('Template two'),
-      'ca_events_node_template_three' => t('Template three'),
     ),
     '#required' => TRUE,
     '#default_value' => variable_get('ca_events_node_template', 'ca_events_node_template_one'),

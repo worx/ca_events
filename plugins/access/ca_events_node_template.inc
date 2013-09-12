@@ -28,7 +28,6 @@ function ca_events_node_template_access_settings($form, &$form_state, $conf) {
     '#options' => array(
       'ca_events_node_template_one' => t('Template one'),
       'ca_events_node_template_two' => t('Template two'),
-      'ca_events_node_template_three' => t('Template three'),
     ),
     '#required' => TRUE,
     '#default_value' => $conf['ca_events_node_template'],
@@ -57,11 +56,8 @@ function ca_events_node_template_access_summary($conf, $context) {
   if ($conf['ca_events_node_template'] == 'ca_events_node_template_one') {
     $template = t('Template one');
   }
-  elseif ($conf['ca_events_node_template'] == 'ca_events_node_template_two') {
-    $template = t('Template two');
-  }
   else {
-    $template = t('Template three');
+    $template = t('Template two');
   }
 
   return t('Display template is set to: ' . $template);

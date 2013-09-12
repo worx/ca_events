@@ -1,3 +1,17 @@
+/* List */
+.ca-event-list-template-1 .views-field-field-ca-events-image,
+.ca-event-list-template-2 .views-field-field-ca-events-image {float: left; padding: 0 15px 5px 0;}
+
+.ca-event-list-template-1 .views-field-nothing,
+.ca-event-list-template-2 .views-field-nothing {clear: both;}
+
+/* Term List */
+.ca-events-list-term-template-2 .views-field-field-ca-events-image,
+.ca-event-list-template-2 .views-field-field-ca-events-image {float: left; padding: 0 15px 5px 0;}
+
+.ca-events-list-term-template-2 .views-field-nothing,
+.ca-event-list-template-2 .views-field-nothing {clear: both;}
+
 /* Node */
 .node-type-ca-event .pane-ca-events-node-ca-event-node-view-1 {float: left;}
 .node-type-ca-event .pane-node-field-ca-events-date {display: inline-block;}
