@@ -24,4 +24,11 @@ function ca_events_install() {
 	
   // Set the Pathauto for the term.
   variable_set('pathauto_taxonomy_term_ca_events_categories_pattern', 'events/[term:vocabulary]/[term:name]');
+
+  // Set the Administer Taxonomy for Events Admin
+  user_role_change_permissions(256820458, 
+    array(
+      'administer taxonomy' => TRUE,
+    )
+  );
 }

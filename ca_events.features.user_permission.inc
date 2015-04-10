@@ -43,6 +43,15 @@ function ca_events_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in ca_events_categories'.
+  $permissions['delete terms in ca_events_categories'] = array(
+    'name' => 'delete terms in ca_events_categories',
+    'roles' => array(
+      'event admin' => 'event admin',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any ca_event content'.
   $permissions['edit any ca_event content'] = array(
     'name' => 'edit any ca_event content',
@@ -63,6 +72,15 @@ function ca_events_user_default_permissions() {
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in ca_events_categories'.
+  $permissions['edit terms in ca_events_categories'] = array(
+    'name' => 'edit terms in ca_events_categories',
+    'roles' => array(
+      'event admin' => 'event admin',
+    ),
+    'module' => 'taxonomy',
   );
 
   return $permissions;

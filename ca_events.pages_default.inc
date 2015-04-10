@@ -1067,62 +1067,23 @@ function ca_events_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_ca_events_taxonomy_admin_panel_context';
+  $handler->name = 'page_ca_events_taxonomy_admin__ca_events_taxonomy_admin';
   $handler->task = 'page';
   $handler->subtask = 'ca_events_taxonomy_admin';
-  $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->handler = 'menu_context';
+  $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'CA Blog: Taxonomy Admin',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
+    'title' => 'CA Events: Taxonomy Admin',
+    'no_blocks' => FALSE,
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'access' => array(
-      'plugins' => array(),
-      'logic' => 'and',
-    ),
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-admin ca-blog-admin',
+    'name' => 'ca_events_taxonomy_admin',
+    'context_admin_options' => 'taxonomy_list_menu',
+    'context_admin_vocabulary' => 'ca_events_categories',
+    'context_admin_vocabulary_options' => 'list',
   );
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = 'CA Events: Taxonomy Admin';
-  $display->uuid = '547e02e3-11fe-4cfe-9dd7-bf6802750b8a';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-7f41a334-128f-45e7-8cc7-55a5fea8d27c';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = '_ca_events_taxonomy_admin-ca_blog_taxonomy_admin';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '7f41a334-128f-45e7-8cc7-55a5fea8d27c';
-    $display->content['new-7f41a334-128f-45e7-8cc7-55a5fea8d27c'] = $pane;
-    $display->panels['middle'][0] = 'new-7f41a334-128f-45e7-8cc7-55a5fea8d27c';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_taxonomy_admin'] = $page;
 
