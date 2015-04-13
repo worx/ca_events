@@ -25,6 +25,9 @@ function ca_events_install() {
   // Set the Pathauto for the term.
   variable_set('pathauto_taxonomy_term_ca_events_categories_pattern', 'events/[term:vocabulary]/[term:name]');
 
+  // Enable the taxonomy/term/%taxonomy_term page without creating a conflict with other features that the page enabled as well.
+  variable_set('page_manager_term_view_disabled', '0');
+
   // Set the Administer Taxonomy for Events Admin
   user_role_change_permissions(256820458, 
     array(
