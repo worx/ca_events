@@ -81,6 +81,6 @@ function ca_events_views_pre_view(&$view, &$display_id, &$args) {
 */
 function ca_events_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools') {
-    return 'plugins/' . $plugin_type;;
+    return 'plugins/' . $plugin_type;
   }
 }
