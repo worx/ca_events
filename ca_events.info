@@ -19,6 +19,7 @@ dependencies[] = features
 dependencies[] = field_ui
 dependencies[] = fullcalendar
 dependencies[] = image
+dependencies[] = multiupload_imagefield_widget
 dependencies[] = node
 dependencies[] = page_manager
 dependencies[] = panels
