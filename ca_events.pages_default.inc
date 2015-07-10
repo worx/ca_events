@@ -17,7 +17,7 @@ function ca_events_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -28;
   $handler->conf = array(
     'title' => 'CA Events: Node View Template One',
     'no_blocks' => 0,
@@ -251,7 +251,7 @@ function ca_events_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Ca Events: Node View Temlate Two',
     'no_blocks' => 0,
@@ -454,7 +454,7 @@ function ca_events_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -28;
   $handler->conf = array(
     'title' => 'CA Events: Term Calendar View Template One',
     'no_blocks' => 0,
@@ -537,7 +537,7 @@ function ca_events_default_page_manager_handlers() {
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'CA Events: Term List View Template One',
     'no_blocks' => 0,
@@ -609,6 +609,633 @@ function ca_events_default_page_manager_handlers() {
   $handler->conf['display'] = $display;
   $export['ca_events_term_view_2_panel_context'] = $handler;
 
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__panel_context_21b3a9e6-0604-4c4b-8595-584961062314';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Node View Template one',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_event' => 'ca_event',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_events_node_template',
+          'settings' => array(
+            'ca_events_node_template' => 'ca_events_node_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-event-node ca-event-node-template-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = 'a839c121-3cbb-4801-82fb-b03f5ad57bd4';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-7d6e419d-62bd-4479-b819-b4eeec07a7fd';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_node-ca_event_node_view_1_a';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7d6e419d-62bd-4479-b819-b4eeec07a7fd';
+    $display->content['new-7d6e419d-62bd-4479-b819-b4eeec07a7fd'] = $pane;
+    $display->panels['first-first'][0] = 'new-7d6e419d-62bd-4479-b819-b4eeec07a7fd';
+    $pane = new stdClass();
+    $pane->pid = 'new-c9c18083-4fdd-4a55-a216-385fea68def5';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_node-ca_event_node_view_1_b';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'c9c18083-4fdd-4a55-a216-385fea68def5';
+    $display->content['new-c9c18083-4fdd-4a55-a216-385fea68def5'] = $pane;
+    $display->panels['first-first'][1] = 'new-c9c18083-4fdd-4a55-a216-385fea68def5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6e8c123e-9ee3-468b-a53b-ea1a04d57a2a';
+    $pane->panel = 'first-first';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ca_events_date';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'date_default',
+      'formatter_settings' => array(
+        'format_type' => 'short',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'fromto' => 'both',
+      ),
+      'view_mode' => 'ctools_custom',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = '';
+    $pane->uuid = '6e8c123e-9ee3-468b-a53b-ea1a04d57a2a';
+    $display->content['new-6e8c123e-9ee3-468b-a53b-ea1a04d57a2a'] = $pane;
+    $display->panels['first-first'][2] = 'new-6e8c123e-9ee3-468b-a53b-ea1a04d57a2a';
+    $pane = new stdClass();
+    $pane->pid = 'new-85160859-c8ad-41c5-a9be-f4a65a9a4060';
+    $pane->panel = 'first-first';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ca_events_e_categories';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '85160859-c8ad-41c5-a9be-f4a65a9a4060';
+    $display->content['new-85160859-c8ad-41c5-a9be-f4a65a9a4060'] = $pane;
+    $display->panels['first-first'][3] = 'new-85160859-c8ad-41c5-a9be-f4a65a9a4060';
+    $pane = new stdClass();
+    $pane->pid = 'new-c241c561-8f5d-4b25-b854-77493a9f4131';
+    $pane->panel = 'first-first';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = '';
+    $pane->uuid = 'c241c561-8f5d-4b25-b854-77493a9f4131';
+    $display->content['new-c241c561-8f5d-4b25-b854-77493a9f4131'] = $pane;
+    $display->panels['first-first'][4] = 'new-c241c561-8f5d-4b25-b854-77493a9f4131';
+    $pane = new stdClass();
+    $pane->pid = 'new-9893d716-1179-4a9e-8bfc-f11e99473393';
+    $pane->panel = 'first-first';
+    $pane->type = 'block';
+    $pane->subtype = 'addtoany-addtoany_button';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'ca-addtoany-feature',
+    );
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = '9893d716-1179-4a9e-8bfc-f11e99473393';
+    $display->content['new-9893d716-1179-4a9e-8bfc-f11e99473393'] = $pane;
+    $display->panels['first-first'][5] = 'new-9893d716-1179-4a9e-8bfc-f11e99473393';
+    $pane = new stdClass();
+    $pane->pid = 'new-bdc57b02-a32e-44fe-bf8f-96922b621822';
+    $pane->panel = 'first-first';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = '';
+    $pane->uuid = 'bdc57b02-a32e-44fe-bf8f-96922b621822';
+    $display->content['new-bdc57b02-a32e-44fe-bf8f-96922b621822'] = $pane;
+    $display->panels['first-first'][6] = 'new-bdc57b02-a32e-44fe-bf8f-96922b621822';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__panel_context_21b3a9e6-0604-4c4b-8595-584961062314'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__panel_context_4e8c7d17-7a8d-4514-a372-0452a1174a90';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Node View Template Two',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_event' => 'ca_event',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_events_node_template',
+          'settings' => array(
+            'ca_events_node_template' => 'ca_events_node_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-event-node ca-event-node-template-2',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '7b53edc6-944d-4c21-a373-c88d621b3c3a';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6df90c4d-c49b-4032-8f71-eb88d15e65b4';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_node-ca_event_node_view_calendar_date';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6df90c4d-c49b-4032-8f71-eb88d15e65b4';
+    $display->content['new-6df90c4d-c49b-4032-8f71-eb88d15e65b4'] = $pane;
+    $display->panels['first-first'][0] = 'new-6df90c4d-c49b-4032-8f71-eb88d15e65b4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5ab7407e-c2e2-4e2b-af78-07365fd0f428';
+    $pane->panel = 'first-second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_node-ca_event_node_view_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5ab7407e-c2e2-4e2b-af78-07365fd0f428';
+    $display->content['new-5ab7407e-c2e2-4e2b-af78-07365fd0f428'] = $pane;
+    $display->panels['first-second'][0] = 'new-5ab7407e-c2e2-4e2b-af78-07365fd0f428';
+    $pane = new stdClass();
+    $pane->pid = 'new-df5ac14d-7a2d-4247-b9a1-c75c3de0261d';
+    $pane->panel = 'first-second';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ca_events_e_categories';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'df5ac14d-7a2d-4247-b9a1-c75c3de0261d';
+    $display->content['new-df5ac14d-7a2d-4247-b9a1-c75c3de0261d'] = $pane;
+    $display->panels['first-second'][1] = 'new-df5ac14d-7a2d-4247-b9a1-c75c3de0261d';
+    $pane = new stdClass();
+    $pane->pid = 'new-7355ecc6-083d-4c7b-bcc5-26c9c692802c';
+    $pane->panel = 'first-second';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = '';
+    $pane->uuid = '7355ecc6-083d-4c7b-bcc5-26c9c692802c';
+    $display->content['new-7355ecc6-083d-4c7b-bcc5-26c9c692802c'] = $pane;
+    $display->panels['first-second'][2] = 'new-7355ecc6-083d-4c7b-bcc5-26c9c692802c';
+    $pane = new stdClass();
+    $pane->pid = 'new-be7c479e-754c-4c5c-be0d-e2673e64f07d';
+    $pane->panel = 'first-second';
+    $pane->type = 'block';
+    $pane->subtype = 'addtoany-addtoany_button';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'ca-addtoany-feature',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'be7c479e-754c-4c5c-be0d-e2673e64f07d';
+    $display->content['new-be7c479e-754c-4c5c-be0d-e2673e64f07d'] = $pane;
+    $display->panels['first-second'][3] = 'new-be7c479e-754c-4c5c-be0d-e2673e64f07d';
+    $pane = new stdClass();
+    $pane->pid = 'new-0768ebc3-5adb-47c7-a5a2-e0dcddb81295';
+    $pane->panel = 'first-second';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = '';
+    $pane->uuid = '0768ebc3-5adb-47c7-a5a2-e0dcddb81295';
+    $display->content['new-0768ebc3-5adb-47c7-a5a2-e0dcddb81295'] = $pane;
+    $display->panels['first-second'][4] = 'new-0768ebc3-5adb-47c7-a5a2-e0dcddb81295';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__panel_context_4e8c7d17-7a8d-4514-a372-0452a1174a90'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'term_view__panel_context_3a2cd75f-3362-48b4-b0b7-80713b1628ff';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Term Calendar View Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-events-calendar-term ca-events-calendar-term-template-1',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'ca_events_categories' => 'ca_events_categories',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_events_term_template',
+          'settings' => array(
+            'ca_events_term_template' => 'ca_events_term_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '65b4888c-386f-40a7-b23a-2d5d26b94524';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-43127c04-5116-4922-adef-7e79bd2da66e';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_term-ca_event_term_view_calendar_date';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '43127c04-5116-4922-adef-7e79bd2da66e';
+    $display->content['new-43127c04-5116-4922-adef-7e79bd2da66e'] = $pane;
+    $display->panels['first-first'][0] = 'new-43127c04-5116-4922-adef-7e79bd2da66e';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['term_view__panel_context_3a2cd75f-3362-48b4-b0b7-80713b1628ff'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'term_view__panel_context_73dd307e-b68a-4ef9-970a-fc4196de5e21';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Term list View Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-events-list-term ca-events-list-term-template-2',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'ca_events_categories' => 'ca_events_categories',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_events_term_template',
+          'settings' => array(
+            'ca_events_term_template' => 'ca_events_term_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Events';
+  $display->uuid = 'b1ae1136-4402-4655-8027-c190481cb810';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-d7bd756d-13e6-4084-8151-751ecf0590f3';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_term-ca_event_term_view_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd7bd756d-13e6-4084-8151-751ecf0590f3';
+    $display->content['new-d7bd756d-13e6-4084-8151-751ecf0590f3'] = $pane;
+    $display->panels['first-first'][0] = 'new-d7bd756d-13e6-4084-8151-751ecf0590f3';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-d7bd756d-13e6-4084-8151-751ecf0590f3';
+  $handler->conf['display'] = $display;
+  $export['term_view__panel_context_73dd307e-b68a-4ef9-970a-fc4196de5e21'] = $handler;
+
   return $export;
 }
 
@@ -667,7 +1294,7 @@ function ca_events_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_events_add_event';
   $handler->handler = 'menu_context';
-  $handler->weight = 0;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'Context Admin',
     'no_blocks' => FALSE,
@@ -680,6 +1307,130 @@ function ca_events_default_page_manager_pages() {
     'context_admin_use_node_edit' => 0,
     'submitted_context' => 'empty',
   );
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_events_add_event__aurora_events_add_event';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_events_add_event';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Add Event',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'aurora_events_add_event',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '7be69a00-1c63-40ce-81d7-c3c52598db8c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-80f7db1a-297a-4367-a1ca-1fc807efb12b';
+    $pane->panel = 'first-first';
+    $pane->type = 'context_admin';
+    $pane->subtype = 'context_admin:node_create_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context_admin_options' => 'node_create_menu',
+      'context_admin_options_items' => 'ca_event',
+      'context_admin_use_node_edit' => 0,
+      'context' => 'empty',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '80f7db1a-297a-4367-a1ca-1fc807efb12b';
+    $display->content['new-80f7db1a-297a-4367-a1ca-1fc807efb12b'] = $pane;
+    $display->panels['first-first'][0] = 'new-80f7db1a-297a-4367-a1ca-1fc807efb12b';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-80f7db1a-297a-4367-a1ca-1fc807efb12b';
+  $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_add_event'] = $page;
 
@@ -734,7 +1485,7 @@ function ca_events_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_events_admin';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'CA Events: Admin',
     'no_blocks' => 0,
@@ -783,6 +1534,74 @@ function ca_events_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_events_admin__panel_context_62461939-1f5f-45b7-98a8-876cbdf3d527';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_events_admin';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-events-admin',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Administer';
+  $display->uuid = '167bc7b2-9f3d-4f50-b3c4-f94a24edd886';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-c9bf4890-8c08-46bd-ba33-62c6586291af';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_admin-ca_event_admin';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c9bf4890-8c08-46bd-ba33-62c6586291af';
+    $display->content['new-c9bf4890-8c08-46bd-ba33-62c6586291af'] = $pane;
+    $display->panels['first-first'][0] = 'new-c9bf4890-8c08-46bd-ba33-62c6586291af';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_admin'] = $page;
 
   $page = new stdClass();
@@ -821,7 +1640,7 @@ function ca_events_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_events_calendar_view';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'CA Events: Calendar View Template One',
     'no_blocks' => 0,
@@ -889,7 +1708,7 @@ function ca_events_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_events_calendar_view';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'CA Events: List View Template One',
     'no_blocks' => 0,
@@ -957,7 +1776,7 @@ function ca_events_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_events_calendar_view';
   $handler->handler = 'panel_context';
-  $handler->weight = 2;
+  $handler->weight = -25;
   $handler->conf = array(
     'title' => 'CA Events: List View Template Two',
     'no_blocks' => 0,
@@ -1018,6 +1837,231 @@ function ca_events_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_events_calendar_view__panel_context_5498de8c-9d38-4d7b-babd-b157c62a7cfb';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_events_calendar_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Calendar View Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_events_list_template',
+          'settings' => array(
+            'ca_events_list_template' => 'ca_events_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-event-calendar-template-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c1a7d7f9-8632-451a-9d74-d15f93cd7218';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-281e7fa4-5fa8-4888-a081-22bfa8d51d04';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_list-ca_event_calendar_view_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '281e7fa4-5fa8-4888-a081-22bfa8d51d04';
+    $display->content['new-281e7fa4-5fa8-4888-a081-22bfa8d51d04'] = $pane;
+    $display->panels['first-first'][0] = 'new-281e7fa4-5fa8-4888-a081-22bfa8d51d04';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_events_calendar_view__panel_context_53e5adfc-10aa-4823-8da8-282303fbd219';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_events_calendar_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Aurora Events: List View Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_events_list_template',
+          'settings' => array(
+            'ca_events_list_template' => 'ca_events_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-event-list ca-event-list-template-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '29620eb5-4f8d-4730-8154-599e844d609d';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-bd9ca21f-d189-4941-9b56-daffa09c14e3';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_list-ca_event_list_view_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'bd9ca21f-d189-4941-9b56-daffa09c14e3';
+    $display->content['new-bd9ca21f-d189-4941-9b56-daffa09c14e3'] = $pane;
+    $display->panels['first-first'][0] = 'new-bd9ca21f-d189-4941-9b56-daffa09c14e3';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_events_calendar_view__panel_context_bfb48c07-9320-4fcc-9cbe-b3ec9a81a735';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_events_calendar_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = -28;
+  $handler->conf = array(
+    'title' => 'Aurora Events: List View Template Two',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_events_list_template',
+          'settings' => array(
+            'ca_events_list_template' => 'ca_events_list_template_three',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-event-list ca-event-list-template-2',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd7af0f90-120c-4d9b-9f6e-33e9ba366e5f';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6e2a64be-2af9-485d-811a-eaf5772dc600';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_list-ca_event_list_view_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6e2a64be-2af9-485d-811a-eaf5772dc600';
+    $display->content['new-6e2a64be-2af9-485d-811a-eaf5772dc600'] = $pane;
+    $display->panels['first-first'][0] = 'new-6e2a64be-2af9-485d-811a-eaf5772dc600';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_calendar_view'] = $page;
 
   $page = new stdClass();
@@ -1071,7 +2115,7 @@ function ca_events_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'ca_events_taxonomy_admin';
   $handler->handler = 'menu_context';
-  $handler->weight = 1;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'CA Events: Taxonomy Admin',
     'no_blocks' => FALSE,
@@ -1084,6 +2128,122 @@ function ca_events_default_page_manager_pages() {
     'context_admin_vocabulary' => 'ca_events_categories',
     'context_admin_vocabulary_options' => 'list',
   );
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_events_taxonomy_admin__aurora_events_taxonomy_admin';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_events_taxonomy_admin';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Aurora Events: Taxonomy Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'aurora_events_taxonomy_admin',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'f60ce126-fcf4-43c2-a750-d4730e9537f5';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2bc928c5-317d-41ff-9400-ac91260c9c94';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = '_ca_events_taxonomy_admin-ca_blog_taxonomy_admin';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2bc928c5-317d-41ff-9400-ac91260c9c94';
+    $display->content['new-2bc928c5-317d-41ff-9400-ac91260c9c94'] = $pane;
+    $display->panels['first-first'][0] = 'new-2bc928c5-317d-41ff-9400-ac91260c9c94';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-2bc928c5-317d-41ff-9400-ac91260c9c94';
+  $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_taxonomy_admin'] = $page;
 
