@@ -924,7 +924,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['field_ca_events_image_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_events_image_1']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_ca_events_image_1']['settings'] = array(
-    'colorbox_node_style' => 'default_thumbnail',
+    'colorbox_node_style' => 'crop_default_landscape_thumbnail',
+    'colorbox_node_style_first' => '',
     'colorbox_image_style' => '',
     'colorbox_gallery' => 'page',
     'colorbox_gallery_custom' => '',
