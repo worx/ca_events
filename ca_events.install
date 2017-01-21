@@ -75,7 +75,7 @@ function ca_events_install() {
  * Set the permissions for Event Admin, Webmaster and Administrator as a one time event rather than handled with features to allow additonal roles to be 
  * given these permissions without overridding the feature.
  */
-function ca_case_study_update_7001() {
+function ca_events_update_7001() {
 
   // Set the permissions for Events Admin
   user_role_change_permissions(256820458, 
