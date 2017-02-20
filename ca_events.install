@@ -27,24 +27,11 @@ function ca_events_install() {
 
   // Enable the taxonomy/term/%taxonomy_term page without creating a conflict with other features that the page enabled as well.
   variable_set('page_manager_term_view_disabled', '0');
-  
-  $vocab = taxonomy_vocabulary_machine_name_load('ca_events_categories');
-  $vocabvid = $vocab->vid;
-  
-  $editterm = 'edit terms in ' . $vocabvid;
-  $deleteterm = 'delete terms in ' . $vocabvid;
 
   // Set the permissions for Events Admin
   user_role_change_permissions(256820458, 
     array(
       'administer taxonomy' => TRUE,
-      'create ca_event content' => TRUE,
-      'delete any ca_event content' => TRUE,
-      'delete own ca_event content' => TRUE,
-      'edit any ca_event content' => TRUE,
-      'edit own ca_event content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
     )
   );
 
@@ -52,13 +39,6 @@ function ca_events_install() {
   user_role_change_permissions(3, 
     array(
       'administer taxonomy' => TRUE,
-      'create ca_event content' => TRUE,
-      'delete any ca_event content' => TRUE,
-      'delete own ca_event content' => TRUE,
-      'edit any ca_event content' => TRUE,
-      'edit own ca_event content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
     )
   );
 
@@ -66,13 +46,6 @@ function ca_events_install() {
   user_role_change_permissions(4, 
     array(
       'administer taxonomy' => TRUE,
-      'create ca_event content' => TRUE,
-      'delete any ca_event content' => TRUE,
-      'delete own ca_event content' => TRUE,
-      'edit any ca_event content' => TRUE,
-      'edit own ca_event content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
     )
   );
 }
@@ -82,24 +55,11 @@ function ca_events_install() {
  * given these permissions without overridding the feature.
  */
 function ca_events_update_7001() {
-  
-  $vocab = taxonomy_vocabulary_machine_name_load('ca_events_categories');
-  $vocabvid = $vocab->vid;
-  
-  $editterm = 'edit terms in ' . $vocabvid;
-  $deleteterm = 'delete terms in ' . $vocabvid;
 
   // Set the permissions for Events Admin
   user_role_change_permissions(256820458, 
     array(
       'administer taxonomy' => TRUE,
-      'create ca_event content' => TRUE,
-      'delete any ca_event content' => TRUE,
-      'delete own ca_event content' => TRUE,
-      'edit any ca_event content' => TRUE,
-      'edit own ca_event content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
     )
   );
 
@@ -107,13 +67,6 @@ function ca_events_update_7001() {
   user_role_change_permissions(3, 
     array(
       'administer taxonomy' => TRUE,
-      'create ca_event content' => TRUE,
-      'delete any ca_event content' => TRUE,
-      'delete own ca_event content' => TRUE,
-      'edit any ca_event content' => TRUE,
-      'edit own ca_event content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
     )
   );
 
@@ -121,13 +74,6 @@ function ca_events_update_7001() {
   user_role_change_permissions(4, 
     array(
       'administer taxonomy' => TRUE,
-      'create ca_event content' => TRUE,
-      'delete any ca_event content' => TRUE,
-      'delete own ca_event content' => TRUE,
-      'edit any ca_event content' => TRUE,
-      'edit own ca_event content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
     )
   );
 }
