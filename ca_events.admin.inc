@@ -47,7 +47,7 @@ function ca_events_settings_form() {
   );
   $form['ca_events_term_display'] = array(
     '#type' => 'select',
-    '#title' => t('Event\'s term display test'),
+    '#title' => t('Event\'s term displays'),
     '#options' => array(
       'ca_events_term_display_false' => t('False'),
       'ca_events_term_display_node' => t('Display on the Node only'),
