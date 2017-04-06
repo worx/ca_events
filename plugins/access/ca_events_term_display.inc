@@ -26,7 +26,7 @@ function ca_events_term_display_access_settings($form, &$form_state, $conf) {
     '#type' => 'select',
     '#title' => t('Event\'s term displays'),
     '#options' => array(
-      'ca_events_term_display_false' => t('Do Not Display'),
+      'ca_events_term_display_false' => t('False'),
       'ca_events_term_display_node' => t('Display on the Node only'),
       'ca_events_term_display_all' => t('Display Everywhere'),
     ),
