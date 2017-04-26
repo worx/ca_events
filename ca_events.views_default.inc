@@ -302,8 +302,10 @@ function ca_events_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_ca_events_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
@@ -318,7 +320,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -537,8 +539,10 @@ function ca_events_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_ca_events_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_ca_events_date']['delta_first_last'] = TRUE;
   /* Field: Content: Body */
@@ -553,7 +557,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -647,8 +651,10 @@ function ca_events_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_ca_events_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_ca_events_date']['delta_first_last'] = TRUE;
   /* Field: Content: Title */
@@ -689,7 +695,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -1170,7 +1176,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -1248,7 +1254,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
