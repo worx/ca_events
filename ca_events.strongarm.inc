@@ -14,7 +14,7 @@ function ca_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ca_event';
-  $strongarm->value = 'edit-xmlsitemap';
+  $strongarm->value = 'edit-linkchecker';
   $export['additional_settings__active_tab_ca_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -77,7 +77,7 @@ function ca_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_medium';
-  $strongarm->value = 'D, m/d/Y - g:ia';
+  $strongarm->value = 'F j, Y - g:ia';
   $export['date_format_medium'] = $strongarm;
 
   $strongarm = new stdClass();
